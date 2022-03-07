@@ -1,0 +1,221 @@
+$primary-color: #611818;
+
+%height-width-inherit {
+  height: inherit;
+  width: inherit;
+}
+
+#app-container {
+  @extend %height-width-inherit;
+  position:relative;
+  font-family: Arial;
+}
+
+#image-container {
+  @extend %height-width-inherit;
+  background: url('../public/Coding-Challenge-Image.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+  position: sticky;
+}
+
+button {
+  background-image: linear-gradient(to right, $primary-color, #A36754);
+  color: white;
+  border: 1px;
+  border-color: #8A5E5E;
+  padding: 10px 40px 10px 40px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+#explore-content {
+  display: flex;
+  padding-right: 10px;
+  transition: all .2s ease-out;
+}
+
+#explore-text {
+  color:white;
+  font-size: 2em;
+  display: block;
+  margin: 15px 10px 0px 20px;
+}
+
+#plus {
+  display:block;
+  height: 40px;
+  width: 40px;
+  margin: 15px 10px 0px 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#social-icons-container {
+  position: fixed;
+  top: 10px;
+  right:0;
+}
+
+.social-icon {
+  margin-right: 10px;
+  height: 40px;
+  width:40px;
+}
+
+#more-details {
+  font-size: 0px;
+}
+
+#modal-container {
+  margin-left: 20px;
+  width: 325px;
+  background-color: white;
+  padding: 30px 20px 20px 20px;
+
+}
+
+#modal-close {
+  float: right;
+  margin-right: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#modal-explore-text {
+  font-size: 40px;
+  color: $primary-color;
+}
+
+#modal-text {
+  display: -webkit-inline-box;
+  color: 505050;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+hr {
+  border: 0;
+  height: 10px;
+  background-image: linear-gradient(to right, $primary-color, white);
+  width: 150px;
+  float: left;
+  margin: 10px 0px 15px 0px;
+}
+
+#sidebar {
+  height: inherit;
+  width: 0px;
+  background-color: $primary-color;
+  position: fixed;
+  z-index:-2;
+}
+
+@media only screen and (min-width: 480px) and (min-height: 116px) {
+
+  #sidebar {
+    width:200px;
+  }
+
+  #explore-content {
+    position:absolute;
+    top: 50%;
+    left: 100px;
+  }
+
+  #explore-text {
+    font-size: 50px;
+    color:white;
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  #plus {
+    height: 45px;
+    width: 45px;
+  }
+
+  #social-icons-container {
+    bottom: 10px;
+    top: auto;
+    right: 5px;
+    padding-top: 5px;
+    margin: 5px 5px;
+  }
+
+  #fb-icon {
+    margin-bottom: 10px;
+   }
+
+  .social-icon {
+    display: block;
+    margin-bottom: 0px;
+    height: 45px;
+    width: 45px;
+  }
+
+  #page-content {
+    padding: 0px;
+  }
+
+  #modal-container {
+    padding: 40px 40px 40px 40px;
+    width: 395px;
+    transition: all .5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    
+  }
+}
+
+@media only screen and (min-width: 767px) and (min-height:487px) {
+
+  #sidebar {
+    width: 300px;
+  }
+
+  #modal-container {
+    margin: 100px 0px 0px 160px;
+    width: 450px;
+  }
+
+  #explore-content {
+    display: inherit;
+  }
+
+  #explore-text {
+    font-size: 150px;
+    color:white;
+    margin: 0;
+    margin-right: 15px;
+    display: block;
+  }
+
+  #plus {
+    margin: 0px 0px 0px 20px;
+  }
+
+  #more-container {
+    display: inline-flex;
+  }
+
+  #more-details {
+    margin: 12px 0px 0px 15px;
+    color:white;
+    font-size: 18px;
+  }
+
+  .social-icon {
+    display: block;
+    margin-bottom: 0px;
+    height: 55px;
+    width: 55px;
+  }
+}
